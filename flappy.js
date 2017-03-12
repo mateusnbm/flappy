@@ -14,30 +14,31 @@
 	The source code was modified for learning purposes and made
 	publicly available through the URL:
 
-	https://github.com/mateusnbm
+	https://github.com/mateusnbm/js-flappy/
 
 	*** License:
 
-	The MIT License (MIT)
+	MIT License
 
-	Copyright (c) 2017 Mateus Nunes de Barros Magalhaes
+	Copyright (c) 2017 Mateus
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy of
-	this software and associated documentation files (the "Software"), to deal in
-	the Software without restriction, including without limitation the rights to
-	use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-	the Software, and to permit persons to whom the Software is furnished to do so,
-	subject to the following conditions:
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
 
 	The above copyright notice and this permission notice shall be included in all
 	copies or substantial portions of the Software.
 
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-	FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-	COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-	IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
 
 */
 
@@ -206,23 +207,29 @@ function heroBlock(x, y, width, height, color) {
 window.addEventListener("keydown", keyboardKeyDown, false);
 window.addEventListener("keyup", keyboardKeyUp, false);
 
+function accelerate(g) {
+
+	heroBlock.accelerate(g);
+
+}
+
 function keyboardKeyDown(keyboardEvent) {
 
-    if (keyboardEvent.keyCode == 32) {
+	if (keyboardEvent.keyCode == 32) {
 
-    	heroBlock.accelerate(-0.2);
+		heroBlock.accelerate(-0.2);
 
-    }
+	}
 
 }
 
 function keyboardKeyUp(keyboardEvent) {
 
-    if (keyboardEvent.keyCode == 32) {
+	if (keyboardEvent.keyCode == 32) {
 
-    	heroBlock.accelerate(0.05);
+		heroBlock.accelerate(0.05);
 
-    }
+	}
 
 }
 
@@ -447,18 +454,18 @@ function updateGameScene() {
 	var image = convertCanvasToImage(gameScene.canvas);
 
 	var gameCanvas = document.getElementById("gameCanvas");
-    var context = gameCanvas.getContext("2d");
+	var context = gameCanvas.getContext("2d");
 
-    image.onload = function() {
+	image.onload = function() {
 
-    	context.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
-    	context.drawImage(image, 0, 0);
+		context.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+		context.drawImage(image, 0, 0);
 
-    	// Remove the reference to the image, so (theoretically), the garbage collector can dispose it.
+		// Remove the reference to the image, so (theoretically), the garbage collector can dispose it.
 
-    	image = null;
+		image = null;
 
-  	}
+	}
 
 }
 
