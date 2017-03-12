@@ -1,0 +1,102 @@
+<!--
+
+	flappy.html
+
+	Created by Mateusnbm on Mar 11, 2017.
+
+	*** Important Notice:
+
+	Portions of this software were obtained from the w3schools website 
+	on Mar 11, 2017 at 4:25 PM, publicly available through the URL:
+
+	https://www.w3schools.com/graphics/game_intro.asp
+	
+	The source code was modified for learning purposes and made
+	publicly available through the URL:
+
+	https://github.com/mateusnbm
+
+	*** License:
+
+	The MIT License (MIT)
+
+	Copyright (c) 2017 Mateus Nunes de Barros Magalhaes
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of
+	this software and associated documentation files (the "Software"), to deal in
+	the Software without restriction, including without limitation the rights to
+	use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+	the Software, and to permit persons to whom the Software is furnished to do so,
+	subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+	FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+	COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+	IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		
+		<link rel="stylesheet" type="text/css" href="flappy.css">
+
+		<script src="flappy.js"></script>
+
+		<title>Mateusnbm | JS Flappy</title>
+
+	</head>
+
+	<body onload="startGame()">
+
+		<div id="page-header">
+
+			<a href="https://mateusnbm.com">Mateusnbm</a>
+			
+			<div id="page-header-separator"></div>
+
+		</div>
+
+		<div id="centeredContainerWrapper">
+
+			<div id="centeredContainer">
+			
+				<div id="gameCanvasWrapper">
+			
+					<canvas id="gameCanvas" width="512" height="350">
+
+				</div>
+
+				<br>
+			
+				<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+			
+				<p>Use the button above or hit SPACE to control the red block.</p>
+			
+				<p>Avoid the green vertical bars to stay alive.</p>
+
+				<p>Passing through each portal grants 100 points. Each blue block collected, grants 250 points.</p>
+
+				<p> <a href="https://www.w3schools.com/graphics/tryit.asp?filename=trygame_default_gravity">Original Source Code</a> </p>
+
+			</div>
+
+		</div>
+	
+	</body>
+
+</html>
+
+
+
+
